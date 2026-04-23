@@ -477,3 +477,47 @@ $severity-low: #3fb950;
         border-color: rgba($severity-low, 0.25);
     }
 }
+/* 📱 MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+
+  .interview-page {
+    padding: 0.5rem; // reduce spacing for mobile
+  }
+
+  .interview-layout {
+    flex-direction: column;   // 🔥 MOST IMPORTANT FIX
+    border-radius: 0.5rem;
+  }
+
+  .interview-nav {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: row;   // ✅ ADD HERE
+    overflow-x: auto;      // ✅ ADD HERE
+
+  }
+  .nav-content {
+    display: flex;         // ✅ ADD HERE
+    gap: 0.5rem;
+  }
+
+  .interview-content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .interview-sidebar {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .interview-divider {
+    display: none; // remove vertical lines
+  }
+
+  /* Optional: fix nav buttons spacing */
+  .interview-nav__item {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
